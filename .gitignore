@@ -1,0 +1,27 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.ipynb_checkpoints/
+*.log
+*.pickle
+
+# OS / IDE
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Data
+data/raw/
+# Uncomment if you want to track processed data
+# data/combined.csv
+# data/cleaned.csv
+# Ignore Python cache and system files

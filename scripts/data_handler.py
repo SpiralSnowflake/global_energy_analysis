@@ -26,12 +26,24 @@ class DataHandler:
         self.df = pd.DataFrame()
         
     # 1. Convert Excel to CSV (One-Time Preprocessing)
-    def excel_to_csv(self, excel_path, output_dir, sheets=None):
-        print(f"Called excel_to_csv with {excel_path=}, {output_dir=}, {sheets=}")
+    def excel_to_csv(self, excel_path, output_dir, sheets=None, prefix=None):
+        """
+        Convert selected sheets in an Excel file to individual CSV files.
+        
+        excel_path : path to the .xlsx file
+        output_dir : folder where CSVs will be saved
+        sheets     : list of sheet names to extract (None = all sheets)
+        prefix     : optional string to prefix CSV filenames (default: excel filename)
+        """
+        print(f"Called excel_to_csv with {excel_path=}, {output_dir=}, {sheets=}, {prefix=}")
         
         output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)
 
+        if prefix is None:
+        # Default: use the Excel filename (without extension) as prefix
+            prefix = Path(excel_path).stem.lower()
+        
         xls = pd.ExcelFile(excel_path)
 
         if sheets is None:
@@ -40,7 +52,7 @@ class DataHandler:
         for sheet in sheets:
             try:
                 df = pd.read_excel(xls, sheet_name=sheet)
-                csv_name = output_dir / f"irena_{sheet.lower().replace(' ', '_')}.csv"
+                csv_name = output_dir / f"{prefix}_{sheet.lower().replace(' ', '_')}.csv"
                 df.to_csv(csv_name, index=False)
                 print(f"Saved {csv_name}")
             except Exception as e:
@@ -101,7 +113,7 @@ class DataHandler:
 
     def clean_data(self):
         """
-        Standardize column names, handle missing values, remove duplicates, convert country names to ISO3
+        Standardize column names, remove duplicates, convert country names to ISO3
         """
         # Standardize column names, Remove spaces before/after names,Convert names to lowercase.
         self.df.columns = (self.df.columns.str.strip()

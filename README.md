@@ -12,10 +12,14 @@ As someone interested in the environment and climate change, this project examin
 
 Explore how renewable energy generation evolves globally over time using the interactive Plotly chart below:
 
-<iframe src="images/renewable_generation_interactive.html" width="100%" height="600" style="border:none;"></iframe>
+<iframe src="images/rq7/renewable_elec_trend.html" width="100%" height="600" style="border:none;"></iframe>
 
 You can explore the interactive global renewable generation over time plot here:  
 [Interactive Plot HTML](images/rq7/renewable_elec_trend.html)
+
+[![Interactive Plot Preview](images/rq7/renewable_elec_trend_preview.png)]
+
+
 
 ---
 
@@ -65,7 +69,7 @@ You can explore the interactive global renewable generation over time plot here:
 | Control of Corruption | Measures corruption | Understanding financing and execution challenges |
 
 ---
-
+```
 ## Directory Structure
 
 project-root/
@@ -96,8 +100,7 @@ project-root/
 ├─ docs/ #Docmentation , including ERD.pdf
 ├─ README.md
 └─ requirements.txt
-
-
+```
 ---
 
 ## Visual Insights
@@ -169,8 +172,6 @@ This will generate `renewable_energy.db` in the `db/` folder.
 deactivate
 ```
 
-```
-
 ## Acknowledgments
 
 - Data sources: [IRENA](https://www.irena.org/Statistics), [Our World in Data](https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions), [World Bank WGI](https://info.worldbank.org/governance/wgi/)  
@@ -179,4 +180,4 @@ deactivate
 
 
 
-![Renewable Energy Trends](images/ren_energy_image.jpg)
+![Renewable Energy Trends](docs/ren_energy_image.jpg)

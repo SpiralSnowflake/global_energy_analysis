@@ -3,9 +3,6 @@
 ## Project Overview
 This project explores global renewable energy trends and drivers using multiple datasets. The goal is to integrate environmental, economic, and governance indicators to understand renewable energy adoption and its impact on CO₂ emissions and energy patterns globally.
 
-## Motivation
-As someone interested in the environment and climate change, this project examines renewable energy adoption to identify key drivers, technologies, and governance factors that support the transition to cleaner energy sources.
-
 ---
 
 ## Interactive Plot: Global Renewable Generation Over Time

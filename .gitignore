@@ -1,14 +1,9 @@
 # Python / Jupyter
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
 .ipynb_checkpoints/
-*.log
-*.pickle
 
-# OS / IDE
-Thumbs.db
+
+# # OS / IDE
 Desktop.ini
 .DS_Store
 .vscode/
@@ -16,12 +11,19 @@ Desktop.ini
 
 # Virtual environment
 venv/
-env/
-ENV/
+.env
 
 # Data
-data/raw/
+*.db
+data/cleaned/
+data/final/
+data/sqlite/
+
+#For reference
+notebooks/for_reference/
+project_scripts/for_ref/
+
 # Uncomment if you want to track processed data
-# data/combined.csv
-# data/cleaned.csv
+#data/combined.csv
+data/cleaned.csv
 # Ignore Python cache and system files
